@@ -10,7 +10,7 @@ import Vehicles from './pages/Vehicles';
 import Orders from './pages/Orders';
 import Login from './pages/Login';
 
-axios.defaults.baseURL = import.meta.env.VITE_API_URL || 'http://localhost:5000';
+axios.defaults.baseURL = import.meta.env.VITE_API_URL || 'https://logitrack-inqt.onrender.com';
 
 export default function App() {
     const [user, setUser] = useState(null);
