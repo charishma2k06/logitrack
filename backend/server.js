@@ -14,14 +14,8 @@ const app = express();
 // Body parser
 app.use(express.json());
 
-// Enable CORS
-app.use(cors({
-    origin: [
-        'http://localhost:5173',
-        process.env.FRONTEND_URL  // e.g. https://logitrack.vercel.app
-    ].filter(Boolean),
-    credentials: true
-}));
+// Enable CORS - allow all origins for demo/portfolio deployment
+app.use(cors());
 
 // Route files
 const authRoutes = require('./routes/authRoutes');
