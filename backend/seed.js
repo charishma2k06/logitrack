@@ -32,7 +32,7 @@ const seedData = async () => {
         // -----------------------------------------
         // 2. Create Drivers
         // -----------------------------------------
-        const drivers = await User.insertMany([
+        const drivers = await User.create([
             { name: 'John Driver', email: 'driver1@logitrack.com', password: 'password123', role: 'Driver' },
             { name: 'Sarah Connor', email: 'driver2@logitrack.com', password: 'password123', role: 'Driver' },
             { name: 'Mike Wheeler', email: 'driver3@logitrack.com', password: 'password123', role: 'Driver' },
@@ -43,7 +43,7 @@ const seedData = async () => {
         // -----------------------------------------
         // 3. Create Customers
         // -----------------------------------------
-        const customers = await User.insertMany([
+        const customers = await User.create([
             { name: 'Alice Customer', email: 'customer1@logitrack.com', password: 'password123', role: 'Customer' },
             { name: 'TechCorp Industries', email: 'techcorp@example.com', password: 'password123', role: 'Customer' },
             { name: 'Global Logistics', email: 'global@example.com', password: 'password123', role: 'Customer' },

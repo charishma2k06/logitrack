@@ -61,12 +61,12 @@ app.get('/api/seed-now', async (req, res) => {
 
         const admin = await User.create({ name: 'Admin User', email: 'admin@logitrack.com', password: 'password123', role: 'Admin' });
         const manager1 = await User.create({ name: 'Manager Alpha', email: 'manager@logitrack.com', password: 'password123', role: 'Manager' });
-        const drivers = await User.insertMany([
+        const drivers = await User.create([
             { name: 'John Driver', email: 'driver1@logitrack.com', password: 'password123', role: 'Driver' },
             { name: 'Sarah Connor', email: 'driver2@logitrack.com', password: 'password123', role: 'Driver' },
             { name: 'Mike Wheeler', email: 'driver3@logitrack.com', password: 'password123', role: 'Driver' },
         ]);
-        const customers = await User.insertMany([
+        const customers = await User.create([
             { name: 'Alice Customer', email: 'customer1@logitrack.com', password: 'password123', role: 'Customer' },
             { name: 'TechCorp Industries', email: 'techcorp@example.com', password: 'password123', role: 'Customer' },
             { name: 'Global Logistics', email: 'global@example.com', password: 'password123', role: 'Customer' },
