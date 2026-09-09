@@ -1,6 +1,9 @@
 import React, { useState } from 'react';
 import axios from 'axios';
 
+// Ensure exactly the Render backend is connected
+axios.defaults.baseURL = 'https://logitrack-inqt.onrender.com';
+
 export default function Login({ onLoginSuccess }) {
     const [email, setEmail] = useState('');
     const [password, setPassword] = useState('');
